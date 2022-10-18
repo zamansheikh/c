@@ -25,8 +25,8 @@ void swap(int *x, int *y)
 
 void bubble_sort(int a[], int length){
     bool swapped;
+    int i = 0;
     do{
-        int i = 0;
         swapped = false;
         for ( int j = 0; j < length - 1 - i ; j ++){
             if( a[j] > a[j+1]){
