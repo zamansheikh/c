@@ -24,14 +24,15 @@ void swap(int *x, int *y)
 
 void insertion_sort(int a[], int length)
 {
-    for (int i = 0; i < length; i++)
+    int key,i,j;
+    for (i = 1; i < length; i++)
     {
-        int smallest;
-        for (int j = 1; j < length; j++)
-        {
-            if (a[j] < smallest)
-                smallest = a[j];
+        int key = a[i];
+        j = i-1;
+        while ( j>=0 && a[j] > key){
+            a[j+1] = a[j];
+            j--;
         }
-        swap(smallest, a[0]);
+        a[j+1] = key;
     }
 }
